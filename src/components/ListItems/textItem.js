@@ -33,6 +33,8 @@ const styles=StyleSheet.create({
         padding: 5
     },
     listView:{
+
+        height: 70,
         padding: 10,
         backgroundColor:'lightslategrey',
         width: '100%',
@@ -44,7 +46,7 @@ const styles=StyleSheet.create({
         margin: 5,
         width: '80%',
         alignSelf: 'center',
-        alignItems: 'center'
+        alignItems: 'center',
     }
 });
 export default TextItem;

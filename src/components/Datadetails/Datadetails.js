@@ -19,12 +19,7 @@ const DataDetail=(props)=>{
                         width:'80%'
                     }
                 }>
-                    <Image source={props.data.image} style={{
-                        width:'100%',
-                        height: 400,
-                        marginBottom: 10,
-                        marginTop: 10
-                    }}/>
+                    <Image source={props.data.image} style={{ width: '100%', height: '80%', marginTop: '1%', marginBottom:'5%'}}/>
                     <View style={
                         {        
                             padding: 10,

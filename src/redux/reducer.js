@@ -15,6 +15,11 @@ export const rootReducer=(state=initState,action)=>{
                     return data.key!==action.payload
                 })
             }
+        case actionTypes.SET_DATA:
+            return {
+                state,
+                datas:action.payload
+            }
         default:
             return state;
 
