@@ -1,6 +1,8 @@
 import * as actionTypes from './actionTypes'
 let initState={
-    datas:[]
+    datas:[],
+    isAuth:false,
+    token: null
 }
 export const rootReducer=(state=initState,action)=>{
     switch(action&&action.type){
@@ -17,9 +19,21 @@ export const rootReducer=(state=initState,action)=>{
             }
         case actionTypes.SET_DATA:
             return {
-                state,
+                ...state,
                 datas:action.payload
             }
+        case actionTypes.ATHENTICATE_USER:
+            return{
+                ...state,
+                isAuth:true,
+                token:action.payload
+            }
+        case actionTypes.LOGOUT_USER:
+            return{
+                ...state,
+                isAuth:false
+            }
+        
         default:
             return state;
 

@@ -5,12 +5,12 @@ import {StyleSheet, View } from 'react-native';
 import DataList from '../Datalist/Datalist';
 import DataDetail from '../Datadetails/Datadetails';
 import { connect } from 'react-redux';
-import {deleteData,loadData } from '../../redux/actionCreator';
+import {dataBaseDeleteData,loadData } from '../../redux/actionCreator';
 
 
 const mapDispatchToProps=(dispatch)=>{
   return{
-    deleteData:(key)=>dispatch(deleteData(key)),
+    dataBaseDeleteData:(key)=>dispatch(dataBaseDeleteData(key)),
     loadData:()=>dispatch(loadData())
     
   }
@@ -41,7 +41,7 @@ const FindData=(props)=>{
     setSelectedData({})
   }
   const deleteItemHandler=(key)=>{
-    props.deleteData(key)
+    props.dataBaseDeleteData(key)
       setSelectedData({})  
   }
   /*
